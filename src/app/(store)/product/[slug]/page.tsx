@@ -29,9 +29,43 @@ export default function ProductPage() {
           <span className="text-sm text-zinc-400">
             Em 12x s/ juros de R$10,75
           </span>
-
-          <div className="mt-8 space-y-4"></div>
         </div>
+        <div className="mt-8 space-y-4">
+          <span className="block font-semibold">Tamanhos</span>
+
+          <div className="flex gap-2">
+            <button
+              type="button"
+              className="flex h-9 w-14 items-center justify-center rounded-full bg-zinc-800 border border-zinc-700"
+            >
+              P
+            </button>
+            <button
+              type="button"
+              className="flex h-9 w-14 items-center justify-center rounded-full bg-zinc-800 border border-zinc-700"
+            >
+              M
+            </button>
+            <button
+              type="button"
+              className="flex h-9 w-14 items-center justify-center rounded-full bg-zinc-800 border border-zinc-700"
+            >
+              G
+            </button>
+            <button
+              type="button"
+              className="flex h-9 w-14 items-center justify-center rounded-full bg-zinc-800 border border-zinc-700"
+            >
+              GG
+            </button>
+          </div>
+        </div>
+        <button
+          type="button"
+          className="mt-8 flex h-12 items-center justify-center rounded-full bg-emerald-600 font-semibold text-white"
+        >
+          Adicionar ao carrinho
+        </button>
       </div>
 
       <div className=""></div>
