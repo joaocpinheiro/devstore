@@ -1,4 +1,4 @@
-import data from '../data.json'
+import data from '../../data.json'
 import { z } from 'zod'
 
 export async function GET(
@@ -10,7 +10,6 @@ export async function GET(
   const slug = z.string().parse(params.slug)
 
   const product = data.products.find((product) => product.slug === slug)
-  console.log(Response.json(product))
 
   if (!product) {
     return Response.json({ message: 'Product not found.' }, { status: 400 })
