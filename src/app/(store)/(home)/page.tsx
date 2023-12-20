@@ -1,10 +1,19 @@
 import { api } from '@/app/data/api'
 import { Product } from '@/app/data/types/product'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
+export const metadata: Metadata = {
+  title: 'Home',
+}
+
 async function getFeaturedProducts(): Promise<Product[]> {
-  const response = await api('/products/featured')
+  const response = await api('/products/featured', {
+    next: {
+      revalidate: 60 * 60, // 1 hour
+    },
+  })
 
   const products = await response.json()
 
