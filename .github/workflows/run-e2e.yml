@@ -36,6 +36,8 @@ jobs:
           name: build
           path: build
 
+      - name: Install npm dependencies
+          run: npm install
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
