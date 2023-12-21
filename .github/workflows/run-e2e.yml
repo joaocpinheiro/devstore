@@ -1,44 +1,33 @@
-name: Cypress Tests with Dependency and Artifact Caching
+name: Cypress Tests
 
 on: push
 
 jobs:
-  install:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Cypress install
-        uses: cypress-io/github-action@v6
-        with:
-          # Disable running of tests within install job
-          runTests: false
-          run: npm install
-          build: npm run build
-
-      - name: Save build folder
-        uses: actions/upload-artifact@v4
-        with:
-          name: build
-          if-no-files-found: error
-          path: build
-
   cypress-run:
     runs-on: ubuntu-22.04
-    needs: install
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Download the build folder
-        uses: actions/download-artifact@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
-          name: build
-          path: build
+          node-version: 20
+
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 16
+          cache: 'npm'
+      - run: npm ci
+      - run: npm test
+  
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
+        env: 
+          APP_URL: "http://localhost:3000"
+          NEXT_PUBLIC_API_BASE_URL: "https://ignite-devstore-api.vercel.app"
         with:
+          build: npm run build
           start: npm start
-          browser: chrome
