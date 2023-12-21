@@ -14,6 +14,7 @@ jobs:
         with:
           # Disable running of tests within install job
           runTests: false
+          run: npm install
           build: npm run build
 
       - name: Save build folder
@@ -39,6 +40,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-          run: npm install
           start: npm start
           browser: chrome
