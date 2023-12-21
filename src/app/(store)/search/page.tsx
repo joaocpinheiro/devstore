@@ -31,7 +31,6 @@ export default async function Search({ searchParams }: SearchProps) {
   }
 
   const products = await searchProducts(query)
-  console.log(products)
 
   return (
     <div className="flex flex-col gap-4">
