@@ -1,5 +1,6 @@
 import { api } from '@/app/data/api'
 import { Product } from '@/app/data/types/product'
+import { Divide } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
@@ -30,6 +31,7 @@ export default async function Search({ searchParams }: SearchProps) {
   }
 
   const products = await searchProducts(query)
+  console.log(products)
 
   return (
     <div className="flex flex-col gap-4">
