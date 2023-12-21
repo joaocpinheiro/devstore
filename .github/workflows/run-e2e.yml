@@ -1,12 +1,32 @@
-name: End-to-end tests
+name: Cypress Tests
+
 on: push
+
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 16
+          cache: 'npm'
+      - run: npm ci
+  
+
       - name: Cypress run
         uses: cypress-io/github-action@v6
+        env: 
+          APP_URL: "http://localhost:3000/"
+          NEXT_PUBLIC_API_BASE_URL: "https://ignite-devstore-api.vercel.app"
+        with:
+          build: npm run build
+          start: npm start
