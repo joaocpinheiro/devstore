@@ -1,0 +1,7 @@
+name: Run E2E tests
+
+on: push
+
+jobs:
+cypress-run:
+runs-on: ubuntu-22.84
