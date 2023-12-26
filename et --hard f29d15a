@@ -1,0 +1,37 @@
+[33mf29d158[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m app_url
+[33ma9b86d8[m index fix
+[33m1c108ab[m Merge branch 'fixParams'
+[33m5487e92[m[33m ([m[1;31morigin/fixParams[m[33m, [m[1;32mfixParams[m[33m)[m chore: add client/server env variables boundary
+[33m04a6ccb[m chore: add client/server env variables boundary
+[33m986b1b6[m chore: add client/server env variables boundary
+[33m1c877b2[m Merge pull request #9 from joaocpinheiro/fixParams
+[33m936ca41[m fix useParams
+[33ma5b215e[m ci: cypress
+[33m5c881c8[m ci: cypress
+[33m320d2b1[m ci: cypress
+[33m976b6e2[m ci: cypress
+[33mb14f76a[m ci: cypress
+[33m4e544ca[m ci: cypress
+[33medea45e[m ci: cypress
+[33m14632dc[m ci: cypress
+[33m59bff62[m ci: cypress
+[33m8868287[m ci: cypress
+[33meb7a8f0[m ci: cypress
+[33ma8b36c4[m Merge pull request #8 from joaocpinheiro/details
+[33me7abbfc[m add cypress test
+[33m077d9f3[m Merge pull request #7 from joaocpinheiro/details
+[33mcaecf0e[m add search page, current-search, fix search router
+[33m59d6771[m Merge pull request #6 from joaocpinheiro/details
+[33m0cb83e4[m add
+[33mb44b331[m add cart-context, layout, product/slug, home page.
+[33m8f1cb41[m Merge pull request #5 from joaocpinheiro/details
+[33m03db62d[m adjustment product page
+[33m6329fd6[m Merge pull request #4 from joaocpinheiro/details
+[33m7d685a1[m product page
+[33m402e417[m Merge pull request #3 from joaocpinheiro/cache
+[33m6ca5f54[m[33m ([m[1;31morigin/cache[m[33m)[m loading home
+[33md0addb8[m Merge pull request #2 from joaocpinheiro/product
+[33mfbc0a4e[m[33m ([m[1;31morigin/product[m[33m)[m fetch de produtos home
+[33m3cb1c4c[m Merge pull request #1 from joaocpinheiro/route
+[33mf16d20c[m[33m ([m[1;31morigin/route[m[33m)[m create api wrapper
+[33mb35eeea[m first commit
